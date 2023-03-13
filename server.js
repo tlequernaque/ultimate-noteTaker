@@ -19,7 +19,9 @@ app.get('/', (req, res) =>
 
 
 app.get('/api/notes', (req, res) => {
-    res.status(200).json(reviews);
+    const dataNotes = fs.readFileSync(path.join(__dirname, './db/db.json'), "utf-8");
+    const parseNotes = JSON.parse(dataNotes);
+    res.json(parseNotes);
 });
 
 
