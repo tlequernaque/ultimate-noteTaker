@@ -4,6 +4,7 @@ const path = require('path');
 const PORT = process.env.port || 3001;
 const api = require('./public/assets/js/index');
 const app = express();
+const { v4: uuidv4 } = require('uuid');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -24,8 +25,15 @@ app.get('/api/notes', (req, res) => {
     res.json(parseNotes);
 });
 
+app.post('/api/notes', (req, res) => {
+    const dataNotes = fs.readFileSync(path.join(__dirname, './db/db.json'), "utf-8");
+    const parseNotes = JSON.parse(dataNotes);
+    req.body.id = uuidv4()
+    parseNotes.push(req.body);
 
-
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), JSON.stringify(parseNotes), "utf-8");
+    res.json("You have added a note!");
+});
 
 
 app.listen(PORT, () =>
