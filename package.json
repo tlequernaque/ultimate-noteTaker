@@ -10,16 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
-    "inquirer": "^8.2.4",
     "uuid": "^9.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tlequernaque/ultimate-noteTaker.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/tlequernaque/ultimate-noteTaker/issues"
-  },
-  "homepage": "https://github.com/tlequernaque/ultimate-noteTaker#readme"
+  }
 }
