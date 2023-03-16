@@ -4,12 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "start": " node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Terry Lequernaque",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
     "uuid": "^9.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tlequernaque/ultimate-noteTaker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tlequernaque/ultimate-noteTaker/issues"
+  },
+  "homepage": "https://github.com/tlequernaque/ultimate-noteTaker#readme"
 }
