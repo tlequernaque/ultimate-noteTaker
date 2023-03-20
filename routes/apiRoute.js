@@ -11,13 +11,13 @@ router.get('/notes', (req, res) => {
     res.json(parseNotes);
 });
 
-router.get('/notes', (req, res) => {
-    for (let i = 0; i < note.length; i++) {
-        if (note[i].id === req.params.id) {
-            res.json(note[i]);
-        }
-    }
-});
+// router.get('/notes', (req, res) => {
+//     for (let i = 0; i < note.length; i++) {
+//         if (note[i].id === req.params.id) {
+//             res.json(note[i]);
+//         }
+//     }
+// });
 
 router.post('/notes', (req, res) => {
     const dataNotes = fs.readFileSync(path.join(__dirname, '../db/db.json'), "utf-8");
